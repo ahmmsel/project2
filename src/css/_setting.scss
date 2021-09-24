@@ -1,0 +1,48 @@
+
+//   vars
+$secondery-hover: #b3c6ff;
+$primary-color: #68ACFF;
+// #ffe7c2 ffbe56
+$secondery-color: #fff;
+$primary-text: #fff;
+$secondery-text: #ffe7c2;
+$card-color: #f2f2f2;
+$primary-hover: #e6e6e6;
+$section-title-color: #fff;
+$section-title-hover: #f3f3f3;
+
+
+  *{
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      line-height: 2;
+      font-family: 'Cairo', sans-serif;
+      text-decoration: none;
+      transition: all .1s;
+      list-style: none;
+      font-size: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+  }
+
+  h1{
+    font-size: 1.5em;
+  }
+
+  .section-title{
+    background-color: $primary-color;
+    h1{
+      text-align: center;
+      padding: 1rem 0;
+      color: $primary-text;
+      cursor: pointer;
+      // font-size: 2rem;
+    }
+    h1:hover{
+      color: $section-title-hover;
+    }
+  }
+  // body{
+  //   overflow-x: hidden;
+  //   font-size: 120%;
+  // }

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+ .code-editor{
+   margin-top: 7rem;
+   color: $section-title-color;
+     .tryit-code{
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     flex-flow: column wrap;
+     #input{
+       padding: 0 10rem;
+       width: 100vw;
+       min-height: 600px;
+       background-color: $secondery-color;
+       color: $primary-color;
+   border: solid 1px #fff;
+       outline: none;
+       font-size: 2rem;
+     }
+     .btn{
+       margin: 2rem 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       .code-btn-run{
+         @extend %code-run;
+       }
+       .code-btn-rest{
+         @extend %code-rest;
+       }
+     }
+   }
+   #output{
+     min-width: 90vw;
+     height: 600px;
+     background-color: #fff;
+   }
+ }
+  </style>
+
+</head>
+<body>
+
+  <!-- online-ide -->
+      <section class="code-editor" id="online-ide">
+          <div class="section-title">
+              <h1>
+                  <i class="main-icons bi bi-code-slash"></i>Online IDE
+              </h1>
+          </div>
+          <main class="tryit-code">
+              <div>
+                  <textarea name="input" id="input">
+                  </textarea>
+                  <div class="btn">
+                      <button class="code-btn-run" id="run">run</button>
+                      <button class="code-btn-rest" id="rest"><i class="bi bi-arrow-repeat"></i></button>
+                  </div>
+              </div>
+
+              <div id="output" style="color: black;">
+
+              </div>
+          </main>
+          </section>
+
+  <!-- end-online-ide -->
+  <script type="text/javascript">
+    const input = document.getElementById('input');
+    const run = document.getElementById('run');
+    const rest = document.getElementById('rest');
+    const output = document.getElementById('output');
+
+    run.onclick = () =>{
+      output.innerHTML = input.value;
+      localStorage.setItem("RESULT", input.value);
+    };
+
+    rest.onclick = () =>{
+      output.innerHTML = "";
+    }
+
+    onload = () =>{
+      input.value = localStorage.getItem("RESULT");
+    }
+  </script>
+</body>
+</html>

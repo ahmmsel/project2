@@ -1,0 +1,66 @@
+%primary-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    cursor: pointer;
+    outline: none;
+    background-color: $primary-color;
+    color: $primary-text;
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+%primary-btn-hover{
+    background-color: $secondery-hover;
+}
+
+%secondery-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  cursor: pointer;
+  outline: none;
+  background-color: $primary-color;
+  color: $primary-text;
+  font-size: 1.5rem;
+  padding: .5rem 3rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+%secondery-btn-hover{
+  // background-color: 
+}
+
+%container{
+    padding: 5rem;
+}
+
+%code-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+%code-run{
+    @extend %code-btn;
+    background-color: green;
+    color: #fff;
+}
+
+%code-rest{
+    @extend %code-btn;
+    background-color: $secondery-color;
+    color: #fff;
+}
